@@ -456,5 +456,289 @@ position: relative;
 /* End of Section 2  */
 
 
+/* Section 3  */
+
+.section__3 {
+   width: 100%;
+   height: 100%;
+   background-color: var(--black-color);
+   flex-direction: column;
+   padding: 15rem 0;
+   clip-path: polygon(68% 0, 100% 0, 100% 97%, 38% 100%, 0 100%, 0 3%);
+}
+
+/* Section 3 Heading  */
+
+.section__3__heading {
+   font-size: 10rem;
+   font-weight: 200;
+   color: var(--primary-color);
+   margin-bottom: 15rem;
+}
+/* End of Section 3 Heading  */
+
+/* Section 3 Content  */
+
+.section__3__content {
+   width: 80%;
+   flex-direction: column;
+   perspective: 1000rem;
+   position: relative;
+}
+
+/* Section 3 img  */
+
+.section__3__content img {
+   width: inherit;
+}
+
+.macbook__img__1 {
+   transform: rotateX(-80deg);
+   transform-origin: bottom;
+}
+
+.change .macbook__img__1 {
+   transform: rotateX(0);
+   transition: transform 3s;
+}
+
+/* End of Section 3 img  */
+
+/* Section 3 Loading */
+
+.loading__wrapper {
+   position: absolute;
+   top: 6%;
+   width: 60%;
+   height: 85%;
+   background: linear-gradient(
+       rgba(255, 255, 255, 0.6),
+       rgba(255, 255, 255, 0.6)
+     ),
+     url(images/MacBook/macbook-1-desktop.png) center no-repeat;
+   z-index: -1;
+   opacity: 0;
+}
+
+.change .loading__wrapper {
+   opacity: 1;
+   transition: opacity 1s 2s;
+}
+
+.loading {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: var(--black-color);
+   flex-direction: column;
+}
+
+.change .loading {
+   opacity: 0;
+   transition: 1s 5s;
+}
+
+.loading i {
+   font-size: 10rem;
+   color: var(--white-color);
+   margin-bottom: 2rem;
+}
+
+.progress__bar {
+   width: 22rem;
+   height: 0.3rem;
+   background-color: #888;
+   border-radius: 5rem;
+   position: relative;
+}
+
+.progress__bar::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background-color: var(--white-color);
+}
+
+.change .progress__bar::after {
+width: 100%;
+transition: width 1s 3s;
+}
+
+/* End of Section 3 Loading  */
+
+/* Section 3 Info  */
+
+.macbook__info {
+   position: absolute;
+   width: 70rem;
+   text-align: center;
+   opacity: 0;
+}
+
+.change .macbook__info {
+   opacity: 1;
+   transition: opacity 1s 6s;
+}
+
+.macbook__info__heading {
+   font-size: 6rem;
+   font-weight: 400;
+   color: var(--primary-color);
+}
+
+.macbook__price {
+   font-size: 2.5rem;
+   font-weight: 200;
+   margin: 3rem 0;
+}
+
+.macbook__btn {
+   width: 25rem;
+   height: 5rem;
+   background-image: linear-gradient(#ddd, #fff);
+   border: none;
+   border-radius: 0.5rem;
+   box-shadow: 0.1rem 0.1rem 0.1rem #fff, -0.1rem -0.1rem 0.1rem #fff;
+   font-size: 1.5rem;
+   font-weight: 500;
+   letter-spacing: 0.2rem;
+   color: var(--primary-color);
+   cursor: pointer;
+}
+
+/* End of Section 3 Info  */
+
+
+/* End of Section 3 Content  */
+
+/* End of Section 3  */
+
+
+/* Section 4  */
+
+.section__4 {
+   height: 140vh;
+   padding: 20vh 0;
+   flex-direction: column;
+   position: relative;
+}
+
+/* Section 4 Watches  */
+
+.watches {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+
+
+
+.watches > div {
+   position: absolute;
+}
+
+/* Watch Bands  */
+
+.watch__band__img {
+   width: 35rem;
+   height: 35rem;
+   object-fit: contain;
+}
+
+.watch__bands {
+   transition: margin-right 1s;
+}
+
+/* End of Watch Bands  */
+
+/* Watch Cases */
+
+.watch__cases {
+   flex-direction: column;
+   transition: margin-top 1s;
+}
+
+.watch__case__img {
+   width: 35rem;
+   height: 35rem;
+   object-fit: contain;
+}
+
+/* End of Watch Cases  */
+
+/* End of Section 4 Watches */
+
+/* Watch Controls  */
+
+.watch__control {
+   position: absolute;
+   width: 4rem;
+   height: 4rem;
+   background-color: rgba(221, 221, 221, 0.4);
+   border-radius: 5rem;
+}
+
+.hideControl {
+   opacity: 0;
+   visibility: hidden;
+ }
+
+.watch__control i {
+   font-size: 3rem;
+   color: var(--primary-color);
+}
+
+.watch__top__control {
+   top: 22vh;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.watch__right__control {
+   top: 50%;
+   right: 2rem;
+   transform: translateY(-50%)
+}
+
+.watch__bottom__control {
+   left: 50%;
+   bottom: 20vh;
+   transform: translateX(-50%);
+}
+
+.watch__left__control {
+   top: 50%;
+   left: 2rem;
+   transform: translateY(-50%);
+}
+
+/* End of Watch Control  */
+
+/* Watch Button  */
+
+.watch__btn {
+   position: absolute;
+   bottom: 30vh;
+   right: 35%;
+   width: 13rem;
+   height: 5rem;
+   background-color: var(--black-color);
+   color: var(--primary-color);
+   border: 0.1rem dashed var(--white-color);
+   border-radius: 5rem;
+   font-size: 1.6rem;
+   font-weight: 200;
+   cursor: pointer;
+}
+
+/* End of Watch Button  */
+
+/* End of Section 4  */
 
 
