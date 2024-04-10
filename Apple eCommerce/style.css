@@ -742,3 +742,95 @@ transition: width 1s 3s;
 /* End of Section 4  */
 
 
+/* Section 5  */
+
+.section__5 {
+   width: 100%;
+   height: 100vh;
+}
+
+/* Section 5 Content  */
+
+.airpods {
+   width: 90%;
+   height: 80%;
+   display: flex;
+   position: relative;
+}
+
+/* Section 5 Heading  */
+
+.section__5__heading {
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   font-size: 15rem;
+   font-weight: 300;
+   color: var(--white-color);
+   text-shadow: 0.1rem 0.1rem 0 #999;
+}
+
+/* End of Section 5 Heading  */
+
+/* Section 5 Images  */
+
+.airpods img {
+   width: 50%;
+   height: 100%;
+   object-fit: contain;
+}
+
+.airpods__img__2 {
+   background-color: var(--primary-color);
+}
+
+/* End of Section 5 Images  */
+
+
+/* Section 5 Buttons  */
+
+.airpods__buttons {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin-top: 5rem;
+}
+
+.airpods__btn {
+   width: 15rem;
+   height: 4rem;
+   background-color: var(--primary-color);
+   margin: 0 2rem;
+   border: none;
+   border-radius: 0.5rem;
+   color: var(--white-color);
+   cursor: pointer;
+}
+
+.airpods__btn:last-child {
+   background-color: var(--white-color);
+   color: var(--primary-color);
+}
+
+.airpods__btn:first-child:hover{
+   background-color: var(--white-color); 
+   color: var(--primary-color);
+   border: 0.1rem solid var(--primary-color);
+   transition: background-color 0.5s;
+}
+
+.airpods__btn:last-child:hover{
+   background-color: var(--primary-color); 
+   color: var(--white-color);
+   border: 0.1rem solid var(--white-color);
+   transition: background-color 0.5s;
+}
+
+/* End of Section 5 Buttons  */
+
+/* End of Section 5 Content  */
+
+
+/* End of Section 5  */
