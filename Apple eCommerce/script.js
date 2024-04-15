@@ -1,7 +1,7 @@
 // Common JS
 document.querySelectorAll('.watch__control, .controls a, .iphone__btn').forEach(control => {
    control.addEventListener('click', e => {
-       e.preventDefault()
+      e.preventDefault()
    })
 })
 // End of Common JS
@@ -10,7 +10,7 @@ document.querySelectorAll('.watch__control, .controls a, .iphone__btn').forEach(
 // Slideshow 
 
 const slideshowDivs = () => {
-   for(let i = 1; i <= 5; i++){
+   for (let i = 1; i <= 5; i++) {
       const div = document.createElement('div')
       div.style.backgroundImage = `url(images/slideshow/section-1-bg-${i}.jpg)`
 
@@ -33,7 +33,7 @@ const slideshow = () => {
 
       div.classList.remove('change')
 
-      if(a < divs.length) {
+      if (a < divs.length) {
          div.nextElementSibling.classList.add('change')
       } else {
          divs[0].classList.add('change')
@@ -58,49 +58,49 @@ let interval;
 const cube = document.querySelector('.cube')
 
 document.querySelector('.top__x__control').addEventListener('click', () => {
-    cube.style.transform = `rotateX(${x += 20}deg) rotateY(${y}deg) rotateZ(${z}deg)`
+   cube.style.transform = `rotateX(${x += 20}deg) rotateY(${y}deg) rotateZ(${z}deg)`
 })
 
 document.querySelector('.bottom__x__control').addEventListener('click', () => {
-    cube.style.transform = `rotateX(${x -= 20}deg) rotateY(${y}deg) rotateZ(${z}deg)`
+   cube.style.transform = `rotateX(${x -= 20}deg) rotateY(${y}deg) rotateZ(${z}deg)`
 })
 
 document.querySelector('.left__y__control').addEventListener('click', () => {
-    cube.style.transform = `rotateX(${x}deg) rotateY(${y -= 20}deg) rotateZ(${z}deg) `
+   cube.style.transform = `rotateX(${x}deg) rotateY(${y -= 20}deg) rotateZ(${z}deg) `
 })
 
 document.querySelector('.right__y__control').addEventListener('click', () => {
-    cube.style.transform = `rotateX(${x}deg) rotateY(${y += 20}deg) rotateZ(${z}deg) `
+   cube.style.transform = `rotateX(${x}deg) rotateY(${y += 20}deg) rotateZ(${z}deg) `
 })
 
 document.querySelector('.top__z__control').addEventListener('click', () => {
-    cube.style.transform = `rotateX(${x}deg) rotateY(${y}deg) rotateZ(${z -= 20}deg) `
+   cube.style.transform = `rotateX(${x}deg) rotateY(${y}deg) rotateZ(${z -= 20}deg) `
 })
 
 document.querySelector('.bottom__z__control').addEventListener('click', () => {
-    cube.style.transform = `rotateX(${x}deg) rotateY(${y}deg) rotateZ(${z += 20}deg) `
+   cube.style.transform = `rotateX(${x}deg) rotateY(${y}deg) rotateZ(${z += 20}deg) `
 })
 
 const playPause = () => {
-    if(bool) {
-        interval = setInterval(() => {
-            cube.style.transform = `rotateX(${x}deg) rotateY(${y++}deg) rotateZ(${z}deg)`
-        }, 100)
-    } else {
-        clearInterval(interval)
-    }
+   if (bool) {
+      interval = setInterval(() => {
+         cube.style.transform = `rotateX(${x}deg) rotateY(${y++}deg) rotateZ(${z}deg)`
+      }, 100)
+   } else {
+      clearInterval(interval)
+   }
 }
 
 playPause()
 
 document.querySelector('.controls').addEventListener('mouseover', () => {
-    bool = false
-    playPause()
+   bool = false
+   playPause()
 })
 
 document.querySelector('.controls').addEventListener('mouseout', () => {
-    bool = true
-    playPause()
+   bool = true
+   playPause()
 })
 
 // End of Cube 
@@ -110,9 +110,9 @@ document.querySelector('.controls').addEventListener('mouseout', () => {
 const section3Content = document.querySelector('.section__3__content')
 
 window.addEventListener('scroll', () => {
-    if(window.pageYOffset + window.innerHeight >= section3Content.offsetTop + section3Content.offsetHeight / 2) {
-        section3Content.classList.add('change')
-    }
+   if (window.pageYOffset + window.innerHeight >= section3Content.offsetTop + section3Content.offsetHeight / 2) {
+      section3Content.classList.add('change')
+   }
 })
 // End of Section 3
 
@@ -130,48 +130,48 @@ let axisY = 0
 let axisX = 0
 
 const hideControl = () => {
-    if(axisY === -280) {
-        watchTopControl.classList.add('hideControl')
-    } else {
-        watchTopControl.classList.remove('hideControl')
-    }
+   if (axisY === -280) {
+      watchTopControl.classList.add('hideControl')
+   } else {
+      watchTopControl.classList.remove('hideControl')
+   }
 
-    if(axisY === 280) {
-        watchBottomControl.classList.add('hideControl')
-    } else {
-        watchBottomControl.classList.remove('hideControl')
-    }
+   if (axisY === 280) {
+      watchBottomControl.classList.add('hideControl')
+   } else {
+      watchBottomControl.classList.remove('hideControl')
+   }
 
-    if(axisX === 280) {
-        watchRightControl.classList.add('hideControl')
-    } else {
-        watchRightControl.classList.remove('hideControl')
-    }
+   if (axisX === 280) {
+      watchRightControl.classList.add('hideControl')
+   } else {
+      watchRightControl.classList.remove('hideControl')
+   }
 
-    if(axisX === -280) {
-        watchLeftControl.classList.add('hideControl')
-    } else {
-        watchLeftControl.classList.remove('hideControl')
-    }
+   if (axisX === -280) {
+      watchLeftControl.classList.add('hideControl')
+   } else {
+      watchLeftControl.classList.remove('hideControl')
+   }
 }
 
 watchTopControl.addEventListener('click', () => {
-    watchCases.style.marginTop = `${axisY -= 70}rem`
-    hideControl()
+   watchCases.style.marginTop = `${axisY -= 70}rem`
+   hideControl()
 })
 
 watchBottomControl.addEventListener('click', () => {
-    watchCases.style.marginTop = `${axisY += 70}rem`
-    hideControl()
+   watchCases.style.marginTop = `${axisY += 70}rem`
+   hideControl()
 })
 
 watchRightControl.addEventListener('click', () => {
-    watchBands.style.marginRight = `${axisX += 70}rem`
-    hideControl()
+   watchBands.style.marginRight = `${axisX += 70}rem`
+   hideControl()
 })
 
 watchLeftControl.addEventListener('click', () => {
-    watchBands.style.marginRight = `${axisX -= 70}rem`
-    hideControl()
+   watchBands.style.marginRight = `${axisX -= 70}rem`
+   hideControl()
 })
 // End of Section 4
